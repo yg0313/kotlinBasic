@@ -137,3 +137,49 @@ fun digit(num: Int) = when(num) {
 
 결과 : 두자리 수
 ```
+
+# 반복문
+
+## for
+코틀린의 for문은 기본적으로 for-each문  
+자바처럼 조건식, 증감식을 사용하는 것이 아닌, 데이터의 묶음에서 요소를 하나씩 가져와 사용하는 구조이다.  
+```
+fun main(args :Array<String>){
+    var arr = arrayOf("A","B","C","D","E")
+
+    // 기본적인 for문
+    for(item in arr){
+        print(item + " ")
+    }
+    
+    // 배열, 자료구조에서 indices를 사용하여 인덱스를 가져올 수 있음.
+    for(idx in arr.indices){
+        print(arr[idx] + " ")
+    }
+
+    // range 문법을 이용하여 index값을 가져올 수 있음.
+    for(idx in 0..arr.size-1){
+        print(arr[idx] + " ")
+    }
+    
+    결과 : A B C D E
+}
+```
+
+```
+fun main(args :Array<String>){
+    var arr = arrayOf("A","B","C","D","E")
+    
+    // index와 값을 둘다 뽑아올때는 withIndex() 활용
+    for((idx, value) in arr.withIndex()){
+        println("$idx 번째 값은 $value")
+    }
+}
+    결과 : 0 번째 값은 A
+           1 번째 값은 B
+           2 번째 값은 C
+           3 번째 값은 D
+           4 번째 값은 E
+```
+
+
