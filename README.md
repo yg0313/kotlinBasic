@@ -41,3 +41,25 @@ var arr:Array<Int> = arrayOf(1,2,3)
 var nullArr = arrayOfNulls<Int>(5)
 println(nullArr.size) //5
 ```
+
+# 조건문
+
+## if문  
+코틀린의 if문은 자바와 동일
+대신 코틀린은 삼항연산자가 없기 때문에 if문을 삼항연산자처럼 값을 할당하는데에 사용할 수 있다.
+```
+fun main(args: Array<String>) {
+    var a = 10;
+    var b = 20;
+
+    var c = if (a != b) {
+        println("a와 b의 값이 다르다.")
+        a + b
+    } else {
+        println("a와 b의 값이 같다.")
+        1020
+    }
+
+    println(c) // 30
+}
+```
