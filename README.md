@@ -100,4 +100,40 @@ fun main(args: Array<String>){
 
 결과 : arr 배열에 속함
 ```
+인자의 타입을 모르는 경우에, 코틀린의 when 문법에서는 타입 검사에 자동 형변환도 지원해준다.
+```
+fun main(args: Array<String>){0
+    var unknownObject:Any = "ABCDEFG"
+    
+    when(unknownObject){
+        is TestClass -> println(unknownObject.print())
+        is String -> println(unknownObject.length)
+        is Int -> println(unknownObject.minus(10))
+    }
+}
+class TestClass{
+    fun print(){
+        println("TestClass 실행 print() 실행")
+    }
+}
 
+결과 : 7
+```
+when은 그 자체로도 함수가 될 수 있다.
+```
+fun main(args: Array<String>){
+    val num:Int = 50
+    val digitStr = digit(num)
+    println(digitStr)
+}
+
+// when을 통해 값을 return
+fun digit(num: Int) = when(num) {
+    in 0..9 -> "한자리 수"
+    in 10..99 -> "두자리 수"
+    in 100..999 -> "세자리 수"
+    else -> "out of Range"
+}
+
+결과 : 두자리 수
+```
