@@ -54,10 +54,10 @@ fun main(args: Array<String>) {
 
     var c = if (a != b) {
         println("a와 b의 값이 다르다.")
-        a + b
+        a + b // c = a+b
     } else {
         println("a와 b의 값이 같다.")
-        1020
+        1020 // c = 1020
     }
 
     println(c) // 30
