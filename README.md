@@ -182,4 +182,6 @@ fun main(args :Array<String>){
            4 번째 값은 E
 ```
 
+## while / do-while
+while 문은 자바의 while문과 100% 
 
