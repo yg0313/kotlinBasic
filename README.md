@@ -183,5 +183,5 @@ fun main(args :Array<String>){
 ```
 
 ## while / do-while
-while 문은 자바의 while문과 100% 
+while 문은 자바의 while문과 100% 동일
 
