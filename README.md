@@ -102,7 +102,7 @@ fun main(args: Array<String>){
 ```
 인자의 타입을 모르는 경우에, 코틀린의 when 문법에서는 타입 검사에 자동 형변환도 지원해준다.
 ```
-fun main(args: Array<String>){0
+fun main(args: Array<String>){
     var unknownObject:Any = "ABCDEFG"
     
     when(unknownObject){
