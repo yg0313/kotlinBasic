@@ -63,3 +63,41 @@ fun main(args: Array<String>) {
     println(c) // 30
 }
 ```
+
+## When
+자바의 switch-case와 유사
+콜론(:) 대신 ->를 사용 또한 default 대신 else 사용
+```
+fun main(args: Array<String>){
+    var num:Int = 10
+
+    when(num){
+        0 -> println("숫자는 0")
+        5 -> println("숫자는 5")
+        10 -> println("숫자는 10")
+        else -> {
+            println("숫자는 0,5,10도 아닌 다른 수")
+            println("{}도 활용가능")
+        }
+    }
+}
+
+결과 : 숫자는 10
+```
+여러 값 비교, 범위 또는 배열에 속하는지도 when에서 사용가능
+```
+fun main(args: Array<String>){
+    var num:Int = 10
+    var arr:IntArray = intArrayOf(1,2,3,4,10)
+    
+    when(num){
+        0,1 -> println("숫자는 0과 1")
+        in 2..5 -> println("2와 5사이의 수")
+        in arr -> println("arr 배열에 속함")
+        !in arr -> println("arr 배열에 속하지 않음")
+    }
+}
+
+결과 : arr 배열에 속함
+```
+
