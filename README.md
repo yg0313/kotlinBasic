@@ -185,3 +185,11 @@ fun main(args :Array<String>){
 ## while / do-while
 while 문은 자바의 while문과 100% 동일
 
+# 함수
+```
+fun 함수명(변수명:타입, 변수명:타입 ....) :  반환형 {
+ 내용
+ 
+ return 반환값
+}
+```
