@@ -205,4 +205,22 @@ fun defaultNum(a:Int, b:Int=2) : Int{   // 인자에 디폴트값 부여
     return a+b
 }
 ```
+  
+함수의 내용이 단일 행인 경우 리턴타입을 생략하며 작성 가능
+```
+fun sum(a:Int, b:Int) = a+b
+```
+  
+가변인자 활용
+``` 
+fun main(args : Array<String>){
+    varNum(1,2,3,4)
+}
+fun varNum(vararg num:Int){ 
+    for (number in num){
+        println(number)
+    }
+}
 
+결과 : 1234
+```
