@@ -193,3 +193,16 @@ fun 함수명(변수명:타입, 변수명:타입 ....) :  반환형 {
  return 반환값
 }
 ```
+```
+fun voidAdd(a:Int, b:Int){ // 반환값이 없음
+    println(a+b)
+}
+fun returnAdd(a:Int, b:Int) : Int{ // 반환값이 있음
+    return a+b
+}
+
+fun defaultNum(a:Int, b:Int=2) : Int{   // 인자에 디폴트값 부여
+    return a+b
+}
+```
+
