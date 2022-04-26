@@ -224,3 +224,9 @@ fun varNum(vararg num:Int){
 
 결과 : 1234
 ```
+
+# 클래스
+자바에서 모든 클래스가 Object클래스를 상속받듯이, 코틀린은 모든 클래스가 Any클래스를 상속받음
+```
+val test = String() // new 키워드를 쓰지않음
+```
