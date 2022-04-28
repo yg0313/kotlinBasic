@@ -246,7 +246,39 @@ fun main(args : Array<String>){
 
 ```
 
+### 생성자가 있는 클래스
 
+```
+class User(
+    var name: String? = null,
+    var email: String? = null,
+    var age: Int = 0
+) {
+    init {  // 생성자 초기화와 동시에 실행
+        println("init $name, $email, $age")
+    }
+}
+
+fun main(args :Array<String>){
+
+    var user = User()
+
+    var user2 = User(
+        name="kyg",
+        email="abcd",
+        age = 31
+    )
+
+    var user3 = User(
+        email = "qwe@naver.com"
+    )
+}
+
+결과 :
+init null, null, 0
+init kyg, abcd, 31
+init null, qwe@naver.com, 0
+```
 
 
 
