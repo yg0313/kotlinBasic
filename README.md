@@ -230,3 +230,30 @@ fun varNum(vararg num:Int){
 ```
 val test = String() // new 키워드를 쓰지않음
 ```
+
+### 생성자가 없는 클래스
+```
+class Calculator{
+ fun sum(a:Int, b:Int){
+        println(a+b)
+    }
+}
+
+fun main(args : Array<String>){
+    val calculator = Calculator();
+    calculator.sum(1,2)
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
