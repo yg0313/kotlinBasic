@@ -280,7 +280,19 @@ init kyg, abcd, 31
 init null, qwe@naver.com, 0
 ```
 
+### 보조생성자
+여러 생성자가 있는 경우, 자신의 생성자를 재호출하여, 다른 생성자에게 나머지 역할을 위임하는 식으로 진행
+```
+class Book (var title:String?=""){
 
+    var author: String=""
+
+    constructor(author:String, title:String): this(title){
+        this.author = author
+    }
+
+}
+```
 
 
 
