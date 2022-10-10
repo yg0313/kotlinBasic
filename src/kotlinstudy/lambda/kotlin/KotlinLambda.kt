@@ -33,6 +33,10 @@ fun main() {
     isApple.invoke(fruits[0]) //람다를 직접 호출하는 방법 2
 
     filterFruits(fruits, isApple)
+    filterFruits(fruits) { fruit ->
+        println(fruit.name)
+        fruit.name == "사과"
+    }
 }
 
 /**
